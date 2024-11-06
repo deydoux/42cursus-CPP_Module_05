@@ -7,9 +7,9 @@ Bureaucrat::Bureaucrat(): _name("Unamed"), _grade(150) {
 Bureaucrat::Bureaucrat(const std::string &name, const int &grade): _name(name), _grade(grade) {
 	std::cerr << "Parametric Bureaucrat constructor called" << std::endl;
 	if (_grade < 1)
-		throw GradeTooHighException();
+		throw (GradeTooHighException());
 	else if (_grade > 150)
-		throw GradeTooLowException();
+		throw (GradeTooLowException());
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other): _name(other._name), _grade(other._grade) {
