@@ -19,6 +19,18 @@ static std::string getBureaucratName(int i) {
 }
 
 int main() {
+	try {
+		Form test("Test", 0, 75);
+	} catch (std::exception &e) {
+		std::cout << "Exception: " << e.what() << std::endl;
+	}
+
+	try {
+		Form test("Test", 75, 151);
+	} catch (std::exception &e) {
+		std::cout << "Exception: " << e.what() << std::endl;
+	}
+
 	Form motherboardRequest("Bender motherboard request", 36, 19);
 	Form musicRequest("Music request", 1, 1);
 
