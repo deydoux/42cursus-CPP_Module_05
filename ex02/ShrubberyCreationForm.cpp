@@ -1,7 +1,11 @@
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(): AForm("Shrubbery creation", 145, 137) {
+ShrubberyCreationForm::ShrubberyCreationForm(): AForm("Shrubbery creation", 145, 137), _target("Unknown target") {
 	std::cerr << "Default ShrubberyCreationForm constructor called" << std::endl;
+}
+
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target): AForm("Shrubbery creation", 145, 137), _target(target) {
+	std::cerr << "Parametric ShrubberyCreationForm constructor called" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other): AForm(other) {

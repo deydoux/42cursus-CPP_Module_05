@@ -1,7 +1,11 @@
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(): AForm("Robotomy request", 72, 45) {
+RobotomyRequestForm::RobotomyRequestForm(): AForm("Robotomy request", 72, 45), _target("Unknown target") {
 	std::cerr << "Default RobotomyRequestForm constructor called" << std::endl;
+}
+
+RobotomyRequestForm::RobotomyRequestForm(const std::string &target): AForm("Robotomy request", 72, 45), _target(target) {
+	std::cerr << "Parametric RobotomyRequestForm constructor called" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other): AForm(other) {

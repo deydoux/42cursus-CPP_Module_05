@@ -1,7 +1,11 @@
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(): AForm("Presidential pardon", 25, 5) {
+PresidentialPardonForm::PresidentialPardonForm(): AForm("Presidential pardon", 25, 5), _target("Unknown target") {
 	std::cerr << "Default PresidentialPardonForm constructor called" << std::endl;
+}
+
+PresidentialPardonForm::PresidentialPardonForm(const std::string &target): AForm("Presidential pardon", 25, 5), _target(target) {
+	std::cerr << "Parametric PresidentialPardonForm constructor called" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &other): AForm(other) {
