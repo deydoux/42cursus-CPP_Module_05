@@ -56,25 +56,25 @@ int main() {
 	std::cout << std::endl;
 
 	try {
-		Form("Invalid", 0, 75);
+		Form("invalid", 0, 75);
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
 
 	try {
-		Form("Invalid", 75, 0);
+		Form("invalid", 75, 0);
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
 
 	try {
-		Form("Invalid", 151, 75);
+		Form("invalid", 151, 75);
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
 
 	try {
-		Form("Invalid", 75, 151);
+		Form("invalid", 75, 151);
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
