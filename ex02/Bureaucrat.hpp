@@ -20,7 +20,8 @@ public:
 	Bureaucrat &operator=(const Bureaucrat &rhs);
 	const std::string &getName() const;
 	const int &getGrade() const;
-	void signAForm(AForm &form) const;
+	void signForm(AForm &form) const;
+	void executeForm(AForm &form) const;
 
 	class GradeTooHighException: public std::exception {
 	public:

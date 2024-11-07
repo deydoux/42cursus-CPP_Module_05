@@ -1,9 +1,12 @@
-NAME = ex01
+NAME = ex02
 
 SOURCES = \
 AForm.cpp \
 Bureaucrat.cpp \
 main.cpp \
+PresidentialPardonForm.cpp \
+RobotomyRequestForm.cpp \
+ShrubberyCreationForm.cpp \
 
 CXX = c++
 CXXFLAGS = -MD -std=c++98 -Wall -Wextra -Werror
