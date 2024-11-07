@@ -12,9 +12,9 @@ int main() {
 	Bureaucrat employee("Unknown employee", 150);
 	std::cout << std::endl;
 
-	PresidentialPardonForm presidentialPardon;
+	PresidentialPardonForm presidentialPardon("Zoidberg");
 	RobotomyRequestForm robotomyRequest("Bender");
-	ShrubberyCreationForm shrubberyCreation("home");
+	ShrubberyCreationForm shrubberyCreation("Planet Express");
 	std::cout << std::endl;
 
 	std::cout << presidentialPardon << std::endl;
