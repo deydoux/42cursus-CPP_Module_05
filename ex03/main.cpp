@@ -1,6 +1,4 @@
-#include "PresidentialPardonForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int main() {
 	// https://theinfosphere.org/Central_Bureaucracy#Known_Employees
@@ -12,108 +10,113 @@ int main() {
 	Bureaucrat employee("Unknown employee", 150);
 	std::cout << std::endl;
 
-	PresidentialPardonForm presidentialPardon;
-	RobotomyRequestForm robotomyRequest("Bender");
-	ShrubberyCreationForm shrubberyCreation("home");
+	Intern someRandomIntern;
+	AForm *presidentialPardon = someRandomIntern.makeForm("presidential pardon", "Zoidberg");
+	AForm *robotomyRequest = someRandomIntern.makeForm("robotomy request", "Bender");
+	AForm *shrubberyCreation = someRandomIntern.makeForm("shrubbery creation", "Planet Express");
 	std::cout << std::endl;
 
-	std::cout << presidentialPardon << std::endl;
-	std::cout << robotomyRequest << std::endl;
-	std::cout << shrubberyCreation << std::endl;
+	std::cout << *presidentialPardon << std::endl;
+	std::cout << *robotomyRequest << std::endl;
+	std::cout << *shrubberyCreation << std::endl;
 	std::cout << std::endl;
 
-	employee.executeForm(presidentialPardon);
-	employee.executeForm(robotomyRequest);
-	employee.executeForm(shrubberyCreation);
+	employee.executeForm(*presidentialPardon);
+	employee.executeForm(*robotomyRequest);
+	employee.executeForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	warden.executeForm(presidentialPardon);
-	warden.executeForm(robotomyRequest);
-	warden.executeForm(shrubberyCreation);
+	warden.executeForm(*presidentialPardon);
+	warden.executeForm(*robotomyRequest);
+	warden.executeForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	hermes.executeForm(presidentialPardon);
-	hermes.executeForm(robotomyRequest);
-	hermes.executeForm(shrubberyCreation);
+	hermes.executeForm(*presidentialPardon);
+	hermes.executeForm(*robotomyRequest);
+	hermes.executeForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	morgan.executeForm(presidentialPardon);
-	morgan.executeForm(robotomyRequest);
-	morgan.executeForm(shrubberyCreation);
+	morgan.executeForm(*presidentialPardon);
+	morgan.executeForm(*robotomyRequest);
+	morgan.executeForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	beholder.executeForm(presidentialPardon);
-	beholder.executeForm(robotomyRequest);
-	beholder.executeForm(shrubberyCreation);
+	beholder.executeForm(*presidentialPardon);
+	beholder.executeForm(*robotomyRequest);
+	beholder.executeForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	number1.executeForm(presidentialPardon);
-	number1.executeForm(robotomyRequest);
-	number1.executeForm(shrubberyCreation);
+	number1.executeForm(*presidentialPardon);
+	number1.executeForm(*robotomyRequest);
+	number1.executeForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	employee.signForm(presidentialPardon);
-	employee.signForm(robotomyRequest);
-	employee.signForm(shrubberyCreation);
+	employee.signForm(*presidentialPardon);
+	employee.signForm(*robotomyRequest);
+	employee.signForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	warden.signForm(presidentialPardon);
-	warden.signForm(robotomyRequest);
-	warden.signForm(shrubberyCreation);
+	warden.signForm(*presidentialPardon);
+	warden.signForm(*robotomyRequest);
+	warden.signForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	hermes.signForm(presidentialPardon);
-	hermes.signForm(robotomyRequest);
-	hermes.signForm(shrubberyCreation);
+	hermes.signForm(*presidentialPardon);
+	hermes.signForm(*robotomyRequest);
+	hermes.signForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	morgan.signForm(presidentialPardon);
-	morgan.signForm(robotomyRequest);
-	morgan.signForm(shrubberyCreation);
+	morgan.signForm(*presidentialPardon);
+	morgan.signForm(*robotomyRequest);
+	morgan.signForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	beholder.signForm(presidentialPardon);
-	beholder.signForm(robotomyRequest);
-	beholder.signForm(shrubberyCreation);
+	beholder.signForm(*presidentialPardon);
+	beholder.signForm(*robotomyRequest);
+	beholder.signForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	number1.signForm(presidentialPardon);
-	number1.signForm(robotomyRequest);
-	number1.signForm(shrubberyCreation);
+	number1.signForm(*presidentialPardon);
+	number1.signForm(*robotomyRequest);
+	number1.signForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	std::cout << presidentialPardon << std::endl;
-	std::cout << robotomyRequest << std::endl;
-	std::cout << shrubberyCreation << std::endl;
+	std::cout << *presidentialPardon << std::endl;
+	std::cout << *robotomyRequest << std::endl;
+	std::cout << *shrubberyCreation << std::endl;
 	std::cout << std::endl;
 
-	employee.executeForm(presidentialPardon);
-	employee.executeForm(robotomyRequest);
-	employee.executeForm(shrubberyCreation);
+	employee.executeForm(*presidentialPardon);
+	employee.executeForm(*robotomyRequest);
+	employee.executeForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	warden.executeForm(presidentialPardon);
-	warden.executeForm(robotomyRequest);
-	warden.executeForm(shrubberyCreation);
+	warden.executeForm(*presidentialPardon);
+	warden.executeForm(*robotomyRequest);
+	warden.executeForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	hermes.executeForm(presidentialPardon);
-	hermes.executeForm(robotomyRequest);
-	hermes.executeForm(shrubberyCreation);
+	hermes.executeForm(*presidentialPardon);
+	hermes.executeForm(*robotomyRequest);
+	hermes.executeForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	morgan.executeForm(presidentialPardon);
-	morgan.executeForm(robotomyRequest);
-	morgan.executeForm(shrubberyCreation);
+	morgan.executeForm(*presidentialPardon);
+	morgan.executeForm(*robotomyRequest);
+	morgan.executeForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	beholder.executeForm(presidentialPardon);
-	beholder.executeForm(robotomyRequest);
-	beholder.executeForm(shrubberyCreation);
+	beholder.executeForm(*presidentialPardon);
+	beholder.executeForm(*robotomyRequest);
+	beholder.executeForm(*shrubberyCreation);
 	std::cout << std::endl;
 
-	number1.executeForm(presidentialPardon);
-	number1.executeForm(robotomyRequest);
-	number1.executeForm(shrubberyCreation);
+	number1.executeForm(*presidentialPardon);
+	number1.executeForm(*robotomyRequest);
+	number1.executeForm(*shrubberyCreation);
 	std::cout << std::endl;
+
+	delete presidentialPardon;
+	delete robotomyRequest;
+	delete shrubberyCreation;
 }

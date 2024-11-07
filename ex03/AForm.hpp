@@ -15,7 +15,7 @@ public:
 	AForm();
 	AForm(const std::string &name, int minGradeToSign, int minGradeToExecute);
 	AForm(const AForm &other);
-	~AForm();
+	virtual ~AForm();
 	AForm &operator=(const AForm &rhs);
 	const bool &isSigned() const;
 	const int &getMinGradeToExecute() const;

@@ -3,6 +3,7 @@ NAME = ex03
 SOURCES = \
 AForm.cpp \
 Bureaucrat.cpp \
+Intern.cpp \
 main.cpp \
 PresidentialPardonForm.cpp \
 RobotomyRequestForm.cpp \
