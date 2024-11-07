@@ -13,7 +13,7 @@ int main() {
 	std::cout << std::endl;
 
 	PresidentialPardonForm presidentialPardon;
-	RobotomyRequestForm robotomyRequest("Michael Buckley");
+	RobotomyRequestForm robotomyRequest("Bender");
 	ShrubberyCreationForm shrubberyCreation("home");
 	std::cout << std::endl;
 
