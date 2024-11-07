@@ -1,29 +1,30 @@
 #include "Bureaucrat.hpp"
 
-// https://theinfosphere.org/Central_Bureaucracy#Known_Employees
-static std::string getBureaucratName(int i) {
-	switch (i) {
-	case 1:
-		return ("Number 1.0");
-	case 11:
-		return ("Beholder");
-	case 19:
-		return ("Morgan Proctor");
-	case 36:
-		return ("Hermes Conrad");
-	case 135:
-		return ("Warden Vogel");
-	default:
-		return ("Unknown employee");
-	}
-}
-
 int main() {
-	for (int i = -1; i <= 151; i++)
-		try {
-			Bureaucrat bureaucrat(getBureaucratName(i), i);
-			std::cout << bureaucrat << std::endl;
-		} catch (std::exception &e) {
-			std::cout << "Exception: " << e.what() << std::endl;
-		}
+	// https://theinfosphere.org/Central_Bureaucracy#Known_Employees
+	Bureaucrat number1("Number 1.0", 1);
+	Bureaucrat beholder("Beholder", 11);
+	Bureaucrat morgan("Morgan Proctor", 19);
+	Bureaucrat hermes("Hermes Conrad", 36);
+	Bureaucrat warden("Warden Vogel", 135);
+	Bureaucrat employee("Unknown employee", 150);
+
+	std::cout << number1 << std::endl;
+	std::cout << beholder << std::endl;
+	std::cout << morgan << std::endl;
+	std::cout << hermes << std::endl;
+	std::cout << warden << std::endl;
+	std::cout << employee << std::endl;
+
+	try {
+		Bureaucrat("Invalid", 0);
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	try {
+		Bureaucrat("Invalid", 151);
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
 }
