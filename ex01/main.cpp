@@ -42,8 +42,8 @@ int main() {
 		try {
 			Bureaucrat bureaucrat(getBureaucratName(i), i);
 			std::cout << bureaucrat << std::endl;
-			motherboardRequest.signForm(bureaucrat);
-			musicRequest.signForm(bureaucrat);
+			bureaucrat.signForm(motherboardRequest);
+			bureaucrat.signForm(musicRequest);
 
 		} catch (std::exception &e) {
 			std::cout << "Exception: " << e.what() << std::endl;

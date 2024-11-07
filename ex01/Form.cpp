@@ -43,19 +43,13 @@ const std::string &Form::getName() const {
 	return (_name);
 }
 
+void Form::sign() {
+	_signed = true;
+}
+
 void Form::beSigned(const Bureaucrat &bureaucrat) const {
 	if (bureaucrat.getGrade() > _minGradeToSign)
 		throw (GradeTooLowException());
-}
-
-void Form::signForm(const Bureaucrat &bureaucrat) {
-	try {
-		beSigned(bureaucrat);
-		std::cout << bureaucrat.getName() << " signed " << _name << std::endl;
-		_signed = true;
-	} catch (std::exception &e) {
-		std::cout << bureaucrat.getName() << " couldn't sign " << _name << " because " << e.what() << std::endl;
-	}
 }
 
 const char *Form::GradeTooHighException::what() const throw() {

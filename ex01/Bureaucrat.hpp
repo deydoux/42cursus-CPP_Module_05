@@ -4,6 +4,9 @@
 #include <exception>
 #include <iostream>
 #include <string>
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat {
 private:
@@ -17,6 +20,7 @@ public:
 	Bureaucrat &operator=(const Bureaucrat &rhs);
 	const std::string &getName() const;
 	const int &getGrade() const;
+	void signForm(Form &form) const;
 
 	class GradeTooHighException: public std::exception {
 	public:
