@@ -10,9 +10,9 @@ int main() {
 	Bureaucrat employee("Unknown employee", 150);
 	std::cout << std::endl;
 
-	Form presidentialPardon("Presidential pardon", 25, 5);
-	Form robotomyRequest("Robotomy request", 72, 45);
-	Form shrubberyCreation("Shrubbery creation", 145, 137);
+	Form presidentialPardon("presidential pardon", 25, 5);
+	Form robotomyRequest("robotomy request", 72, 45);
+	Form shrubberyCreation("shrubbery creation", 145, 137);
 	std::cout << std::endl;
 
 	std::cout << presidentialPardon << std::endl;
