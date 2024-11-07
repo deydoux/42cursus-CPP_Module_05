@@ -54,10 +54,10 @@ void AForm::sign(const Bureaucrat &bureaucrat) {
 }
 
 void AForm::beExecuted(const Bureaucrat &executor) const {
-	if (!_signed)
-		throw (NotSignedException());
-	else if (executor.getGrade() > _minGradeToExecute)
+	if (executor.getGrade() > _minGradeToExecute)
 		throw (GradeTooLowException());
+	else if (!_signed)
+		throw (NotSignedException());
 }
 
 const char *AForm::GradeTooHighException::what() const throw() {
