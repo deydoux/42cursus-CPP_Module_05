@@ -116,6 +116,12 @@ int main() {
 	number1.executeForm(*shrubberyCreation);
 	std::cout << std::endl;
 
+	try {
+		someRandomIntern.makeForm("invalid", "Random traget");
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl << std::endl;
+	}
+
 	delete presidentialPardon;
 	delete robotomyRequest;
 	delete shrubberyCreation;
