@@ -8,6 +8,7 @@ int main() {
 	Bureaucrat hermes("Hermes Conrad", 36);
 	Bureaucrat warden("Warden Vogel", 135);
 	Bureaucrat employee("Unknown employee", 150);
+	std::cout << std::endl;
 
 	std::cout << number1 << std::endl;
 	std::cout << beholder << std::endl;
@@ -15,6 +16,7 @@ int main() {
 	std::cout << hermes << std::endl;
 	std::cout << warden << std::endl;
 	std::cout << employee << std::endl;
+	std::cout << std::endl;
 
 	try {
 		Bureaucrat("Invalid", 0);
@@ -27,4 +29,5 @@ int main() {
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 }
