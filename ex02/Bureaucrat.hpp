@@ -21,6 +21,8 @@ public:
 	const std::string &getName() const;
 	const int &getGrade() const;
 	void signForm(AForm &form) const;
+	void incrementGrade();
+	void decrementGrade();
 	void executeForm(AForm &form) const;
 
 	class GradeTooHighException: public std::exception {

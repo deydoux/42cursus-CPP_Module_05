@@ -19,6 +19,22 @@ int main() {
 	std::cout << std::endl;
 
 	try {
+		employee.decrementGrade();
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << employee << std::endl;
+
+	try {
+		while (true)
+			employee.incrementGrade();
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << employee << std::endl;
+	std::cout << std::endl;
+
+	try {
 		Bureaucrat("Invalid", 0);
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;

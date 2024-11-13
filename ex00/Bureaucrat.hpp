@@ -17,6 +17,8 @@ public:
 	Bureaucrat &operator=(const Bureaucrat &rhs);
 	const std::string &getName() const;
 	const int &getGrade() const;
+	void incrementGrade();
+	void decrementGrade();
 
 	class GradeTooHighException: public std::exception {
 	public:
