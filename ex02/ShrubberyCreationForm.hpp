@@ -13,7 +13,7 @@ public:
 	ShrubberyCreationForm(const ShrubberyCreationForm &other);
 	~ShrubberyCreationForm();
 	ShrubberyCreationForm &operator=(const ShrubberyCreationForm &rhs);
-	void execute(const Bureaucrat &executor);
+	void execute(const Bureaucrat &executor) const;
 };
 
 #endif

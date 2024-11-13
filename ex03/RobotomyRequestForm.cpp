@@ -24,7 +24,7 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &)
 	return (*this);
 }
 
-void RobotomyRequestForm::execute(const Bureaucrat &executor) {
+void RobotomyRequestForm::execute(const Bureaucrat &executor) const {
 	beExecuted(executor);
 	if (std::rand() % 2)
 		std::cout << _target << " has been robotomized" << std::endl;

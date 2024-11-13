@@ -24,7 +24,7 @@ public:
 	void beSigned(const Bureaucrat &bureaucrat) const;
 	void sign(const Bureaucrat &bureaucrat);
 	void beExecuted(const Bureaucrat &executor) const;
-	virtual void execute(const Bureaucrat &executor) = 0;
+	virtual void execute(const Bureaucrat &executor) const = 0;
 
 	class GradeTooHighException: public std::exception {
 	public:
